@@ -60,6 +60,11 @@ const rootReducer = (state = initState, action) => {
             item:'',
             editedItem: false
           });
+    } else if (action.type === 'CHANGE_TODO_ITEM') {
+        return ({
+            ...state,
+            item: action.title
+        });
     }
     return state;
 }
